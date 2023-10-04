@@ -9,9 +9,7 @@ namespace Tyuiu.KaverinED.Sprint2.Task2.V10.Lib
     public class DataService : ISprint2Task2V10
     {
         public bool CheckDotInShadedArea(int x, int y)
-        {
-            --x; --y;
-   
+        {   
             return Convert.ToBoolean(Area.array[x, y]);
         }
         public static void PrintArea(int[,] array)

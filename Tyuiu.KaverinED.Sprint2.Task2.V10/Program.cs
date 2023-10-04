@@ -16,18 +16,20 @@ namespace Tyuiu.KaverinED.Sprint2.Task2.V10
             int x = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите значение y: ");
             int y = Convert.ToInt32(Console.ReadLine());
+            x -= 1;
+            y -= 1;
             Console.Clear();
             int[,] newArr = DataService.Area.array;
             result = DataService.Area.array[x, y];
-            newArr[x-1, y-1] = 2;
+            newArr[x, y] = 2;
             DataService.PrintArea(DataService.Area.array);
             if (result == 1)
             {
-                Console.WriteLine($"Точка ({x}, {y}) находится в закрашенной области)");
+                Console.WriteLine($"Точка ({x}, {y}) находится в закрашенной области");
             }
             else
             {
-                Console.WriteLine($"Точка ({x}, {y}) не находится в закрашенной области)");
+                Console.WriteLine($"Точка ({x}, {y}) не находится в закрашенной области");
             }
             Console.ReadLine();
         }
